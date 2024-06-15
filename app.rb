@@ -14,7 +14,7 @@ def flist_to_h(cksum_file_name)
 end
 
 # change?
-def extract_change(list_a, list_b, prefix = '')
+def extract_change(list_a, list_b, prefix = '', _suffix = '')
   diff = []
 
   list_b.each do |target_file_name, fsum|

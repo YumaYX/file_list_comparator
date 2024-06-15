@@ -1,7 +1,7 @@
 # get cksum list
 
 ```sh
-sh get_cksums.sh
+sh get_cksums.sh /etc
 ```
 
 # compare
@@ -9,4 +9,3 @@ sh get_cksums.sh
 ```sh
 ruby app.rb <file1> <file2>
 ```
-

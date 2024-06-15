@@ -4,8 +4,7 @@
 
 tstamp=$(date +%Y%m%d%H%M%S)
 
-# /etc
-find /etc | while read line
+find ${1} | while read line
 do
 cksum ${line}
 done > list_${tstamp}.txt
