@@ -3,13 +3,15 @@
 
 def flist_to_h(cksum_file_name, prefix = '')
   hash = {}
-  lines = File.readlines(cksum_file_name).map(&:chomp)
-  lines.map do |line|
+  
+  File.foreach(cksum_file_name) do |line|
+    line.chomp!
     parts = line.match(/^(\d+)\s+\d+\s+(.*)$/)
     sum_value = parts[1].to_i
     file_name = prefix + parts[2].gsub(%r{^\./}, '')
     hash[file_name] = sum_value
   end
+  
   hash
 end
 
