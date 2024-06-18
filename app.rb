@@ -35,13 +35,19 @@ if __FILE__ == $PROGRAM_NAME
 
   ec = extract_change(a, b)
   puts 'CHANGE:'
-  p ec
+  ec.each do |ele|
+    puts ele
+  end
 
   puts 'ADD:'
   al = add_list(a, b)
-  p al
+  al.each do |ele|
+    puts ele
+  end
 
   puts 'DELETE:'
   dl = add_list(b, a)
-  p dl
+  dl.each do |ele|
+    puts ele
+  end
 end
